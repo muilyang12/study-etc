@@ -1,0 +1,38 @@
+version: "1.0"
+
+services:
+  mongodb:
+    image: mongo
+    container_name: mongo
+    restart: always # 컨테이너를 수동으로 끄기 전까지 항상 재시작하기.
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: muilyang
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./db:/data/db
+
+  test-server1:
+    image: test-docker-image1
+    container_name: test-docker-container1
+    restart: always # 컨테이너를 수동으로 끄기 전까지 항상 재시작하기.
+    links:
+      - mongodb
+    build:
+      context: /express-docker-test1
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+
+  test-server2:
+    image: test-docker-image2
+    container_name: test-docker-container2
+    restart: always # 컨테이너를 수동으로 끄기 전까지 항상 재시작하기.
+    build:
+      context: /express-docker-test2
+      dockerfile: Dockerfile
+    ports:
+      - "7000:7000"
