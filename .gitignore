@@ -6,3 +6,9 @@
 
 # openapi-generator output
 **/output
+
+# vscode setting
+**/.vscode
+
+# cpp build
+**.exe
