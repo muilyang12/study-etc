@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "6.2.1",
+    "generators": {
+      "typescript-axios": {
+        "generatorName": "typescript-axios",
+        "inputSpec": "https://api-user.cimworks.kr-st-midasit.com/v3/api-docs/CIMWORKS%20API",
+        "output": "#{cwd}/output/typescript-axios"
+      },
+      "cpp-restsdk": {
+        "generatorName": "cpp-restsdk",
+        "inputSpec": "https://api-user.cimworks.kr-st-midasit.com/v3/api-docs/CIMWORKS%20API",
+        "output": "#{cwd}/output/cpp-restsdk"
+      }
+    }
+  }
+}
