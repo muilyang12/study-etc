@@ -6,13 +6,13 @@
     "generators": {
       "typescript-axios": {
         "generatorName": "typescript-axios",
-        "inputSpec": "https://api-user.cimworks.kr-st-midasit.com/v3/api-docs/CIMWORKS%20API",
+        "inputSpec": "http://localhost:8000",
         "output": "#{cwd}/output/typescript-axios"
       },
       "cpp-restsdk": {
         "generatorName": "cpp-restsdk",
-        "inputSpec": "https://api-user.cimworks.kr-st-midasit.com/v3/api-docs/CIMWORKS%20API",
-        "output": "#{cwd}/output/cpp-restsdk"
+        "inputSpec": "http://localhost:8000",
+        "output": "#{cwd}/output/cpp-restsdk",
       }
     }
   }
