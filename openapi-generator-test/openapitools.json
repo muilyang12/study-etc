@@ -14,7 +14,7 @@
         "inputSpec": "http://localhost:8000",
         "output": "#{cwd}/output/cpp-restsdk",
         "additionalProperties": {
-          "packageName": "MuilApi",
+          "packageName": "MuilProject",
           "apiPackage": "muil.api",
           "modelPackage": "muil.model"
         }
