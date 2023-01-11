@@ -13,6 +13,11 @@
         "generatorName": "cpp-restsdk",
         "inputSpec": "http://localhost:8000",
         "output": "#{cwd}/output/cpp-restsdk",
+        "additionalProperties": {
+          "packageName": "MuilApi",
+          "apiPackage": "muil.api",
+          "modelPackage": "muil.model"
+        }
       }
     }
   }
