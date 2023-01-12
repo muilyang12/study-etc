@@ -121,7 +121,7 @@ router.patch("/:name", (req, res) => {
  *  paths:
  *   /{name}:
  *     delete:
- *       summary: Update an existing member
+ *       summary: Delete an existing member
  *       tags: [Member]
  *       parameters:
  *       - name: name
