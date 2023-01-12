@@ -24,7 +24,7 @@ const teamMember = [
  *               $ref: '#/components/schemas/MemberDto'
  *       responses:
  *         "200":
- *           description: The member updated
+ *           description: The member created
  *           content:
  *             application/json:
  *               schema:
@@ -50,7 +50,7 @@ router.post("/", (req, res) => {
  *       tags: [Member]
  *       responses:
  *         "200":
- *           description: The list of all members
+ *           description: List of all members
  *           content:
  *             application/json:
  *               schema:
@@ -132,7 +132,7 @@ router.patch("/:name", (req, res) => {
  *           type: string
  *       responses:
  *         "200":
- *           description: The list of all members
+ *           description: List of remaining members
  *           content:
  *             application/json:
  *               schema:
