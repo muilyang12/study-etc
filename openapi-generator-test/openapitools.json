@@ -6,12 +6,12 @@
     "generators": {
       "typescript-axios": {
         "generatorName": "typescript-axios",
-        "inputSpec": "http://localhost:8000",
+        "inputSpec": "http://localhost:8888/swagger-ui.json",
         "output": "#{cwd}/output/typescript-axios"
       },
       "cpp-restsdk": {
         "generatorName": "cpp-restsdk",
-        "inputSpec": "http://localhost:8000",
+        "inputSpec": "http://localhost:8888/swagger-ui.json",
         "output": "#{cwd}/output/cpp-restsdk",
         "additionalProperties": {
           "packageName": "MuilProject",

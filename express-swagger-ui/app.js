@@ -22,6 +22,11 @@ const options = {
 const specs = swaggerJsdoc(options);
 app.use("/swagger-ui", swaggerUi.serve, swaggerUi.setup(specs));
 
+app.get("/swagger-ui.json", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.send(specs);
+});
+
 app.get("/", (req, res) => {
   res.send("Hello !!");
 });
