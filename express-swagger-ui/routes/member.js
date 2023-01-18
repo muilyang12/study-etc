@@ -32,13 +32,15 @@ const teamMember = [
  */
 
 router.post("/", (req, res) => {
-  teamMember.push({
+  const newTeamMember = {
     name: req.body.name ?? "",
     age: req.body.age ?? 0,
     hometown: req.body.hometown ?? "",
-  });
+  };
 
-  res.status(200).send(teamMember);
+  teamMember.push(newTeamMember);
+
+  res.status(200).send(newTeamMember);
 });
 
 /**
@@ -107,13 +109,15 @@ router.patch("/:name", (req, res) => {
 
   if (index < 0) res.status(400).send("BAD_REQUEST");
 
-  teamMember[index] = {
+  const newTeamMember = {
     name: req.body.name ?? "",
     age: req.body.age ?? 0,
     hometown: req.body.hometown ?? "",
   };
 
-  res.send(teamMember[index]);
+  teamMember[index] = newTeamMember;
+
+  res.send(newTeamMember);
 });
 
 /**
@@ -150,7 +154,7 @@ router.delete("/:name", (req, res) => {
 
   teamMember.splice(index, 1);
 
-  res.send(teamMember);
+  res.send(true);
 });
 
 module.exports = router;
