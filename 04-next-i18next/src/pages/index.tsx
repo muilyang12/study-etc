@@ -1,7 +1,6 @@
 import { NextPageContext } from "next";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import nextI18NextConfig from "../../next-i18next.config";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -28,7 +27,7 @@ export async function getStaticProps(context: NextPageContext) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"], nextI18NextConfig)),
+      ...(await serverSideTranslations(locale, ["common"])),
     },
   };
 }
