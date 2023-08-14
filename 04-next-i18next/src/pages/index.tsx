@@ -23,7 +23,7 @@ export default function Home() {
 }
 
 export async function getStaticProps(context: NextPageContext) {
-  const { locale = "EN" } = context;
+  const { locale = "en" } = context;
 
   return {
     props: {
