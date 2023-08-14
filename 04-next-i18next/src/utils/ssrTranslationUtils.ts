@@ -36,3 +36,7 @@ export const getServerSidePropsWithTranslation = (
     }
   };
 };
+
+export const getStaticPropsWithTranslation = () => {
+  return () => {];
+}
