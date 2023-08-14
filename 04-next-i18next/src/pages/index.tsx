@@ -1,6 +1,5 @@
-import { NextPageContext } from "next";
+import { getServerSidePropsWithTranslation } from "@utils/ssrTranslationUtils";
 import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -22,12 +21,4 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps(context: NextPageContext) {
-  const { locale = "en" } = context;
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
+export const getServerSideProps = getServerSidePropsWithTranslation();
