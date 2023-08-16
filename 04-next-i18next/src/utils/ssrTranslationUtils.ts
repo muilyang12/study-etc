@@ -22,7 +22,7 @@ export const getServerSidePropsWithTranslation = (
       return {
         props: {
           ...getServerSidePropsResult.props,
-          ...(await serverSideTranslations(locale, ["common"])),
+          ...(await serverSideTranslations(locale, ["common", "greeting"])),
         },
       };
     } else if ("redirect" in getServerSidePropsResult) {
@@ -38,5 +38,5 @@ export const getServerSidePropsWithTranslation = (
 };
 
 export const getStaticPropsWithTranslation = () => {
-  return () => {];
-}
+  return () => {};
+};
