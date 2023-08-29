@@ -1,0 +1,8 @@
+{
+  "name": "06-npm-commands",
+  "packageManager": "yarn@3.6.3",
+  "VALUE_TO_USE": "12.10",
+  "scripts": {
+    "echo-value": "echo $(node -p \"require('./package.json').VALUE_TO_USE\")"
+  }
+}
