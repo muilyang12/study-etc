@@ -3,7 +3,11 @@
   "packageManager": "yarn@3.6.3",
   "VALUE_TO_USE": "12.10",
   "scripts": {
-    "update-version": "",
-    "echo-value": "echo $(node -p \"require('./package.json').VALUE_TO_USE\")"
+    "update-version": "yarn git-clone && yarn run-tsc && yarn move-files && yarn delete-files",
+    "echo-value": "echo $(node -p \"require('./package.json').VALUE_TO_USE\")",
+    "git-clone": "",
+    "run-tsc": "",
+    "move-files": "",
+    "delete-files": ""
   }
 }
