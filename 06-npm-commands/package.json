@@ -5,9 +5,9 @@
   "scripts": {
     "update-version": "yarn git-clone && yarn run-tsc && yarn move-files && yarn delete-files",
     "echo-value": "echo $(node -p \"require('./package.json').VALUE_TO_USE\")",
-    "git-clone": "",
-    "run-tsc": "",
-    "move-files": "",
-    "delete-files": ""
+    "git-clone": "git clone --branch ...",
+    "run-tsc": "tsc --project ...",
+    "move-files": "cpx ...",
+    "delete-files": "node ..."
   }
 }
